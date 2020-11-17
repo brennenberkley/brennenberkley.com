@@ -20,7 +20,8 @@
 
 title: Brennen's blog
 description: Just a place for my occasional ramblings.
-path: '/blog'
+
+baseurl: "" # the subpath of your site, e.g. /blog
 
 # Build settings
 theme: minima
