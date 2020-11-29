@@ -1,4 +1,28 @@
 document.querySelectorAll('.carousel').forEach(carousel => {
+  var touchstartX = 0;
+  var touchstartY = 0;
+  var touchendX = 0;
+  var touchendY = 0;
+
+  carousel.addEventListener('touchstart', function(event) {
+      touchstartX = event.changedTouches[0].screenX;
+      touchstartY = event.changedTouches[0].screenY;
+  }, false);
+
+  carousel.addEventListener('touchend', function(event) {
+      touchendX = event.changedTouches[0].screenX;
+      touchendY = event.changedTouches[0].screenY;
+      handleGesture();
+  }, false); 
+
+  function handleGesture() {
+      if (touchendX - touchstartX > 20) {
+          showSlides(slideIndex -= 1);
+      } else if (touchendX - touchstartX < -20) {
+          showSlides(slideIndex += 1);
+      }
+  }
+
   const prev = carousel.querySelector('.prev');
   const next = carousel.querySelector('.next');
 
