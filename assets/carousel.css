@@ -79,8 +79,8 @@
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 12px;
-  width: 12px;
+  height: 11px;
+  width: 11px;
   margin: 0 3px;
   background-color: #bbb;
   border-radius: 50%;
