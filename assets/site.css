@@ -1,0 +1,14 @@
+.caption {
+  color: #666;
+  font-size: 0.87rem;
+  margin: 5px 0 20px;
+  display: block;
+}
+
+.image-wide {
+  width: 100%;
+}
+
+h3 {
+  margin-bottom: 0;
+}
